@@ -114,7 +114,7 @@ function printALlNames(Arr) {
 }
 printALlNames(namesArr)
 
-////////////////// PROBLEM 8 ////////////////////Completed
+////////////////// PROBLEM 8 ////////////////////Completed!
 /*
   Create a function called thatsOdd that takes in a single argument (a number).
   Using conditional logic, if the number is even, return 'That's not odd!'
@@ -178,7 +178,7 @@ function theEliminator(contestArr, loser) {
 }
 //console.log(theEliminator(contestants, loser))
 
-////////////////// PROBLEM 11 ////////////////////Completed
+////////////////// PROBLEM 11 ////////////////////Completed!
 let sampleString = "Hi, my name is Kylo."
 /*
   Write a function that takes im one argument, a string. The function should then console.log that string, in entirely uppercase characters.
@@ -206,7 +206,7 @@ function chocFrog(gold) {
 let totalFrogs = chocFrog(100)
 //console.log(totalFrogs)
 
-////////////////// PROBLEM 13 ////////////////////Completed WITH PROBLEM 12 ALREADY
+////////////////// PROBLEM 13 ////////////////////Completed! WITH PROBLEM 12 ALREADY
 /*
   You might have noticed a slight bug in problem 12. If you were to pass in 4 gold, the function would return to you 1.3333... However, you can't really go to a store and by 1.333 products. You would just be able to purchase 1 product. Re-write the function you used in problem 12 (give it the same name just add a 2 to the end of it) that fixes this bug. Store the returned value to a variable called `totalFrogs2`.
 */
@@ -214,16 +214,32 @@ let totalFrogs = chocFrog(100)
 //CODE HERE
 
 
-////////////////// PROBLEM 14 ////////////////////
+////////////////// PROBLEM 14 ////////////////////Completed!
 let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 /*
-  Write a function that takes in an array of numbers as an argument. In the body of the function, write logic to determine if the array is in ascending order. The function should return true, if it is sorted in ascending order, false if it is not. Create a variable, `arrayIsAscending` and set it equal to your function invoked. Use the sample array to test this function.
+  Write a function that takes in an array of numbers as an argument. 
+  In the body of the function, write logic to determine if the array is in ascending order. 
+  The function should return true, if it is sorted in ascending order, false if it is not. 
+  Create a variable, `arrayIsAscending` and set it equal to your function invoked. 
+  Use the sample array to test this function.
 */
 
+//sampleArray.splice(5,1)
+//console.log(sampleArray)
 //CODE HERE
+function ascendArr(array) {
+  for (let i = 0; i < (array.length - 1); i++) {
+    if (array[i] > array[i+1]) {
 
+      return false
+    }
+  }
+  return true
+}
+arrayIsAscending = ascendArr(sampleArray)
+console.log(arrayIsAscending)
 
-////////////////// PROBLEM 15 ////////////////////
+////////////////// PROBLEM 15 ////////////////////Completed!
 
 let duck = "cute";
 
@@ -245,13 +261,13 @@ function pond() {
 */
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = []
+let globalScope = ["duck"]
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = []
+let bathroomScope = ["duck", "rubberDuck"]
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
-let bathtubScope = []
+let bathtubScope = ["duck", "rubberDuck", "sailorDuck"]
 
 //This array should contain the variable names (as strings) accessible in the pond function.
-let pondScope = []
+let pondScope = ["duck", "realDuck"]
