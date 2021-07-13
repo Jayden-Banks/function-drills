@@ -1,13 +1,16 @@
-////////////////// PROBLEM 1 ////////////////////
+////////////////// PROBLEM 1 ////////////////////Completed!
 /*
   Create a function called helloWorld which simply console logs 'Hello, World!'
   Call the function.
 */
 
 //CODE HERE
+function helloWorld() {
+  console.log('Hello, World')
+}
+helloWorld()
 
-
-////////////////// PROBLEM 2 ////////////////////
+////////////////// PROBLEM 2 ////////////////////Completed!
 /*
   Create a function called printName which takes in a persons name and console logs it.
   Ex. If 'Cameron' were passed in as the argument, Cameron would be console logged.
@@ -15,9 +18,12 @@
 */
 
 //CODE HERE
+function printName(name) {
+  console.log(name)
+}
+printName('Cameron')
 
-
-////////////////// PROBLEM 3 ////////////////////
+////////////////// PROBLEM 3 ////////////////////Completed!
 /*
   Create a function called greeting that
   accepts name as its only parameter.
@@ -28,9 +34,12 @@
 */
 
 //CODE HERE
+function greeting(name) {
+  console.log(`Hello, ${name}`)
+}
+greeting('Jake')
 
-
-////////////////// PROBLEM 4 ////////////////////
+////////////////// PROBLEM 4 ////////////////////Completed!
 /*
   Create a function called add that takes in two parameters (both of these will be numbers)
   The add function should RETURN the two parameters added together.
@@ -38,9 +47,12 @@
 */
 
 //CODE HERE
+function add(num1, num2) {
+  return num1 + num2
+}
+let sum = add(1, 2)
 
-
-////////////////// PROBLEM 5 ////////////////////
+////////////////// PROBLEM 5 ////////////////////Completed!
 /*
   Write a function called nameCheck that takes in a name parameter.
   nameCheck should check if the name equals 'Steven'. If it does, return 'What is up Steven?'
@@ -50,9 +62,18 @@
 */
 
 //CODE HERE
+function nameCheck (name) {
+  if (name === 'Steven') {
+    return 'What is up Steven?'
+  } else if (name === 'Bryan') {
+    return 'Hey Bryan!'
+  } else {
+    return `Cool name, ${name}`
+  }
+}
+let nameGreeting = nameCheck('Dummy')
 
-
-////////////////// PROBLEM 6 ////////////////////
+////////////////// PROBLEM 6 ////////////////////Completed!
 /*
   Write a function called faveColorFinder that takes in one parameter called color (which will be a string).
   If the passed in color equals 'red', return 'red is a great color'
@@ -63,9 +84,21 @@
 */
 
 //CODE HERE
+function faveColorFinder(color) {
+  if (color === 'red') {
+    return 'red is a great color'
+  } if (color === 'green') {
+    return 'green is a solid favorite color'
+  } if (color === 'black') {
+    return 'so trendy'
+  } else {
+    return 'you need to evaluate your favorite color choice'
+  }
+}
+let colorRating = faveColorFinder('red')
+console.log(colorRating)
 
-
-////////////////// PROBLEM 7 ////////////////////
+////////////////// PROBLEM 7 ////////////////////Completed!
 let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 /*
   Create a function called printALlNames that takes in a single argument (an array of names).
@@ -74,9 +107,14 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
+function printALlNames(Arr) {
+  for (let i = 0; i < Arr.length; i++) {
+    console.log(Arr[i])
+  }
+}
+printALlNames(namesArr)
 
-
-////////////////// PROBLEM 8 ////////////////////
+////////////////// PROBLEM 8 ////////////////////Completed
 /*
   Create a function called thatsOdd that takes in a single argument (a number).
   Using conditional logic, if the number is even, return 'That's not odd!'
@@ -85,9 +123,17 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
+function thatsOdd(num) {
+  if (num % 2 === 0) {
+    return "That's not odd!"
+  } else {
+    return 'That is odd indeed!'
+  }
+}
+let oddChecker = thatsOdd(999)
+//console.log(oddChecker)
 
-
-////////////////// PROBLEM 9 ////////////////////
+////////////////// PROBLEM 9 ////////////////////completed, but array output looks weird
 let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
 /* 
   Create a function called 'bigOrSmall' that takes in one parameter, 'arr',  which will be an array of numbers. 
@@ -99,9 +145,21 @@ let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
 */
 
 //CODE HERE
+function bigOrSmall(arr) {
+  let answers = []
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 100) {
+      answers.push('big')
+    } else if (arr[i] < 100) {
+      answers.push('small')
+    }
+  }
+  return answers
+}
+let arrayEvaluator = bigOrSmall(bigOrSmallArray)
+//console.log(arrayEvaluator)
 
-
-////////////////// PROBLEM 10 ////////////////////
+////////////////// PROBLEM 10 ////////////////////Completed!
 let contestants = ['Katniss', 'Peeta', 'Fox-face', 'Glimmer', 'Cato', 'Rue', 'Thresh', 'Clove', 'Marvel']
 let loser = 'Glimmer'
 /*
@@ -110,27 +168,45 @@ let loser = 'Glimmer'
 */
 
 //CODE HERE
+function theEliminator(contestArr, loser) {
+  for (let i = 0; i < contestArr.length; i++) {
+    if (contestArr[i] === loser) {
+      contestArr.splice(i, 1)
+    } 
+  }
+  return contestArr
+}
+//console.log(theEliminator(contestants, loser))
 
-
-////////////////// PROBLEM 11 ////////////////////
+////////////////// PROBLEM 11 ////////////////////Completed
 let sampleString = "Hi, my name is Kylo."
 /*
   Write a function that takes im one argument, a string. The function should then console.log that string, in entirely uppercase characters.
 */
 
 //CODE HERE
+function printString(string) {
+  console.log(string.toUpperCase())
+}
+printString(sampleString)
 
-
-////////////////// PROBLEM 12 ////////////////////
+////////////////// PROBLEM 12 ////////////////////Completed
 /*
   Write a function, naming it whatever you believe to be appropriate, that buys as many chocolate frogs as possible with a certain amount of gold. Each chocolate frog costs 3 gold. Your function should take in a single parameter, which is the amount of gold you are willing to spend. Your function should return a total amount of chocolate frogs you were able to purchase.
   Create a variable called `totalFrogs` and set it equal to your function invoked, passing in the amount of gold you are willing to spend.
 */
 
 //CODE HERE
+function chocFrog(gold) {
+  let cost = 3
+  let count = 0
+  count = Math.floor(gold / cost) //Math.floor rounds down to nearest integer
+  return count
+}
+let totalFrogs = chocFrog(100)
+//console.log(totalFrogs)
 
-
-////////////////// PROBLEM 13 ////////////////////
+////////////////// PROBLEM 13 ////////////////////Completed WITH PROBLEM 12 ALREADY
 /*
   You might have noticed a slight bug in problem 12. If you were to pass in 4 gold, the function would return to you 1.3333... However, you can't really go to a store and by 1.333 products. You would just be able to purchase 1 product. Re-write the function you used in problem 12 (give it the same name just add a 2 to the end of it) that fixes this bug. Store the returned value to a variable called `totalFrogs2`.
 */
